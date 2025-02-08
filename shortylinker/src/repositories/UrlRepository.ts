@@ -14,7 +14,7 @@ export default class UrlRepository{
         return await this.urlModel.findById(id).lean();
     }
 
-    async getUrlByShortUrl(shortUrl: string): Promise<IUrl | null> {
+    async getUrlBy (shortUrl: string): Promise<IUrl | null> {
         return await this.urlModel.findOne({shortUrl})
     }
     async getUrlByOriginalUrl(originalUrl: string): Promise<IUrl | null> {
